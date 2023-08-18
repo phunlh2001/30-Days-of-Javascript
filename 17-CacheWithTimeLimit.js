@@ -11,14 +11,14 @@ var TimeLimitedCache = function() {
 TimeLimitedCache.prototype.set = function(key, value, duration) {
   let res = false
   if (this.cache.has(key)) {
-      const ref = this.cache.get(key).ref
-      clearTimeout(ref)
-      res = true
+    const ref = this.cache.get(key).ref
+    clearTimeout(ref)
+    res = true
   }
   const ref = setTimeout(() => this.cache.delete(key), duration)
   this.cache.set(key, {
-      value: value,
-      ref: ref
+    value: value,
+    ref: ref
   })
   return res
 };
@@ -29,9 +29,9 @@ TimeLimitedCache.prototype.set = function(key, value, duration) {
 */
 TimeLimitedCache.prototype.get = function(key) {
   if (this.cache.has(key)) {
-      return this.cache.get(key).value
+    return this.cache.get(key).value
   } else {
-      return -1
+    return -1
   }
 };
 
