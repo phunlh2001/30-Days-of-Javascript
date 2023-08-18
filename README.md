@@ -1,3 +1,3 @@
-# 30 Days Of Javascript Challange
+# 30 Days Of Javascript Challenge
 
 ### Study Plan of Leetcode
