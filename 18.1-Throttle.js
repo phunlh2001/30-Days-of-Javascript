@@ -1,3 +1,8 @@
+/**
+ * @param {Function} fn 
+ * @param {number} t milliseconds
+ * @returns {Function}
+ */
 const throttle = function(fn, t) {
   let wait = false
 
