@@ -3,11 +3,11 @@
  * @return {Function}
  */
 var once = function(fn) {
-  let times = 0;
+  let times = 0
   return function(...args){
-      times++;
-      if (times===1) return fn(...args);
-      return undefined;
+      times++
+      if (times === 1) return fn(...args)
+      return undefined
   }
 };
 
